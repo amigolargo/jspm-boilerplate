@@ -9,7 +9,15 @@
     "serve:dist": "http-server -p 8080 ./dist",
     "watch": "parallelshell 'npm run watch:styles' 'npm run watch:live-reload'",
     "watch:styles": "nodemon -e scss -x node-sass --include-path scss src/scss/main.scss src/css/main.css",
-    "watch:live-reload": "live-reload --port 9091 ./src"
+    "watch:live-reload": "live-reload --port 9091 ./src",
+    "clean": "n-clean dist/* && mkdir dist && mkdir dist/js",
+    "prebuild": "npm run clean -s",
+    "build": "npm run build:assets && npm run build:extras && npm run build:scripts -s && npm run build:styles -s && npm run build:html -s",
+    "build:assets": "n-copy --source src --destination dist 'css/**/*' 'img/**/*'",
+    "build:extras": "n-copy --source src --destination dist 'favicon.ico' 'apple-touch-icon.png'",
+    "build:scripts": "./node_modules/.bin/jspm bundle-sfx ./src/js/app ./dist/js/app.min.js --minify",
+    "build:styles": "postcss --use autoprefixer src/css/main.css | cssmin > dist/css/main.css",
+    "build:html": "./node_modules/.bin/html-dist src/index.html --remove-all --minify --insert js/app.min.js -o dist/index.html"
   },
   "author": "Tom Longmate",
   "license": "ISC",
