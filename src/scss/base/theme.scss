@@ -1,0 +1,7 @@
+// =============================================================================
+// Theme rules for block level container elements (colour, background, texture)
+// =============================================================================
+
+html {
+	background-color: map-get($bg, highlight);
+}

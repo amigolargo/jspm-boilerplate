@@ -1,0 +1,19 @@
+// ==========================================================================
+// Helper mixins
+// ==========================================================================
+
+@mixin clearfix {
+	zoom:1;
+	&:before, &:after { content:""; display:table; }
+	&:after { clear: both; }
+}
+
+
+
+// https://css-tricks.com/snippets/sass/deep-getset-maps/
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}

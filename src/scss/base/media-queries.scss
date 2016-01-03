@@ -1,0 +1,8 @@
+// =============================================================================
+// Media Queries (use ems instead of pixels to account for user zoom)
+// =============================================================================
+
+$mqS: 				"all and ( min-width: 20em )"; 		// 320px
+$mqM: 				"all and ( min-width: 40em )";		// 640px
+$mqL: 				"all and ( min-width: 60em )";		// 960px
+$mqXL: 				"all and ( min-width: 80em )";		// 1280px
