@@ -15,9 +15,7 @@ System.config({
   map: {
     "babel": "npm:babel-core@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
-    "chroma-js": "npm:chroma-js@1.2.1",
     "core-js": "npm:core-js@1.2.6",
-    "d3": "npm:d3@3.5.17",
     "lodash": "npm:lodash@3.10.1",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -36,9 +34,6 @@ System.config({
     },
     "npm:babel-runtime@5.8.34": {
       "process": "github:jspm/nodelibs-process@0.1.2"
-    },
-    "npm:chroma-js@1.2.1": {
-      "fs": "github:jspm/nodelibs-fs@0.1.2"
     },
     "npm:core-js@1.2.6": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",

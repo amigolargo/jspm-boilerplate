@@ -13,7 +13,7 @@
     "clean": "n-clean dist/* && mkdir dist && mkdir dist/js",
     "prebuild": "npm run clean -s",
     "build": "npm run build:assets && npm run build:extras && npm run build:scripts -s && npm run build:styles -s && npm run build:html -s",
-    "build:assets": "n-copy --source src --destination dist 'css/**/*' 'img/**/*' 'data/**/*'",
+    "build:assets": "n-copy --source src --destination dist 'css/**/*' 'img/**/*'",
     "build:extras": "n-copy --source src --destination dist 'favicon.ico' 'apple-touch-icon.png'",
     "build:scripts": "./node_modules/.bin/jspm bundle-sfx ./src/js/app ./dist/js/app.min.js --minify",
     "build:styles": "postcss --use autoprefixer src/css/main.css | cssmin > dist/css/main.css",
@@ -40,13 +40,11 @@
       "baseURL": "src"
     },
     "dependencies": {
-      "d3": "npm:d3@3.5.17",
       "lodash": "npm:lodash@^3.10.1"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "chroma-js": "npm:chroma-js@^1.2.1",
       "core-js": "npm:core-js@^1.1.4"
     }
   }

@@ -7,13 +7,6 @@
     "node": true,
     "es6": true
   },
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module",
-    "ecmaFeatures": {
-        "jsx": true
-    }
-  },
   "rules": {
     "strict": 0,
     "no-underscore-dangle": 0,

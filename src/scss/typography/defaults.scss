@@ -25,24 +25,9 @@ a {
 	}
 }
 
-button {
-	font-family: 'Roboto Mono';
-	position: absolute;
-	bottom: 2rem;
-	right: 2rem;
-	font-size: 2rem;
-	color: gray;
-}
-
 h1, h2, h3, h4, h5, h6 {
 	text-rendering: optimizeLegibility;
 	color: map-get($text, highlight);
-}
-
-h1 {
-	position: absolute;
-	font-size: 2rem;
-	padding: 2rem;
 }
 
 strong,
